@@ -51,14 +51,7 @@
 #' @noRd
 sfread <- function(input, ..., colClasses = NULL, integer64 = 'numeric')
 {
-  dots <- within(
-    list(...),
-    {
-      input <- input
-      header <- NULL
-      nrows <- NULL
-    }
-  )
+  dots <- within(list(input=input, ...), suppressWarnings(rm(header, nrows)))
 
   theHeader <- do.call(readHeader, dots)
   colClasses <- switch(
