@@ -110,7 +110,8 @@ as.MSnSet.WideSomaLogicData <- function(x, log2Transform = FALSE, ...)
 {
   if(!requireNamespace("MSnbase", quietly = TRUE))
   {
-    stop('MSnbase is not available; try running\nsource("https://bioconductor.org/biocLite.R")\nbiocLite("MSnbase")')
+    stop('MSnbase is not available; try running\nif (!requireNamespace("BiocManager", quietly=TRUE))\nBiocManager::install("MSnbase")')
+    install.packages("BiocManager")\nBiocManager::install("MSnbase")')
   }
   e <- as.ExpressionSet(x, log2Transform = log2Transform)
   MSnbase::as.MSnSet.ExpressionSet(e)
