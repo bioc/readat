@@ -1,6 +1,6 @@
 Package: readat
 Title: Functionality to Read and Manipulate SomaLogic ADAT files
-Version: 1.13.0
+Version: 1.13.1
 Authors@R: c(
     person("Richard", "Cotton", email = "richierocks@gmail.com", role = c("cre", "aut")),
     person("Aditya", "Bhagwat", email = "adb2018@qatar-med.cornell.edu", role = c("aut")))
@@ -60,3 +60,4 @@ Collate:
     'soma2eset.R'
     'suppressSomeFeedback.R'
 VignetteBuilder: knitr
+PackageStatus: Deprecated
